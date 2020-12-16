@@ -1,1 +1,11 @@
-new output
+= render 'commons/header'
+.article-new
+  = form_with( model: @article, url: articles_path, method: 'post', local: true ) do |f|
+    .article-new-images
+      = f.file_field :images, multiple: true
+    .article-new-title
+      = f.text_field :title, :placeholder => "タイトル"
+    .article-new-content
+      = f.text_area :content, :placeholder => "積み上げた内容や共有したいことを書こう！"
+    .article-new-submit-btn
+      = f.submit '送信'

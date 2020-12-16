@@ -3,4 +3,17 @@
   font-size: 1.5rem;
   border-bottom: 1px solid #dadada;
   padding-bottom: 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  .header-title {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .header-subtitle {
+    font-size: 0.7rem;
+    color: #777777;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
 }
