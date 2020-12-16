@@ -1,0 +1,43 @@
+.user-authentications {
+  .user-authentications-header {
+    text-align: center;
+    h1 {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      line-height: 500px;
+      font-size: 2rem;
+    }
+  }
+  .user-authentications-link {
+    display: flex;
+    justify-content: center;
+    .user-authentications-login {
+      border: 1px solid #000;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin-right: 20px;
+      color: #000;
+      background-color: #efefef;
+      border-radius: 10px;
+    }
+
+    .user-authentications-login:hover {
+      background-color: white;
+      
+    }
+
+    .user-authentications-new-registration {
+      border: 1px solid #000;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: white;
+      border-radius: 10px;
+      background-color: #000;
+    }
+    .user-authentications-new-registration:hover {
+      color: white;
+      background-color: #3e3d3d;
+    }
+  }
+}

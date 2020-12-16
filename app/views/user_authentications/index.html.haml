@@ -1,0 +1,9 @@
+.user-authentications
+  .user-authentications-header
+    %h1 Learn programming
+    %p Done is better than perfect.
+  .user-authentications-link
+    = link_to new_user_session_path, class: 'user-authentications-login' do
+      ログイン
+    = link_to new_user_registration_path, class: 'user-authentications-new-registration' do
+      新規登録

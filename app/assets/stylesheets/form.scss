@@ -1,0 +1,45 @@
+.form {
+  .field {
+    margin-bottom: 25px;
+    label {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      font-size: 25px;
+      margin-top: 5px;
+      border: 2px solid #000;
+    }
+  }
+  .actions {
+    margin-top: 50px;
+    input {
+      width: 100%;
+      height: 46px;
+      background-color: #000;
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    input:hover {
+      background-color:  #464646;
+      border: none;
+      color: white;
+    }
+  }
+  .form-shared-links {
+    margin-top: 30px;
+    text-align: right;
+    a {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover {
+      color:   #464646;
+    }
+  }
+}
