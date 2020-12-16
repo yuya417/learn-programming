@@ -17,22 +17,27 @@
       font-size: 1.5rem;
       margin-right: 20px;
       color: #000;
-      background-color: white;
+      background-color: #efefef;
       border-radius: 10px;
     }
 
-    .user-authentications-new-registration, .user-authentications-login:hover {
+    .user-authentications-login:hover {
+      background-color: white;
+      
+    }
+
+    .user-authentications-new-registration {
       border: 1px solid #000;
       padding: 10px 25px;
       text-decoration: none;
       font-size: 1.5rem;
       color: white;
-      background-color: #000;
       border-radius: 10px;
+      background-color: #000;
     }
     .user-authentications-new-registration:hover {
-      color: #000;
-      background-color: white;
+      color: white;
+      background-color: #3e3d3d;
     }
   }
 }
