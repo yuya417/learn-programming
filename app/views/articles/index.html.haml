@@ -1,3 +1,17 @@
 = render 'commons/header'
+.card
+  .card-text
+    .card-text-title
+      %h1 タイトル
+    .card-text-content
+      %p コンテントコンテントコンテントコンテントコンテントコンテントコンテンンテントコンテントコンテントコンテントコンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテントンテント
+    .card-text-user
+      .card-text-user-image
+        = image_tag 'top-page.jpg'
+      .card-text-user-info
+        %p username 
+        %span 作成日時
+  .card-image
+    = image_tag 'top-page.jpg'
 = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete'}
 = link_to 'アウトプット作成', new_article_path
