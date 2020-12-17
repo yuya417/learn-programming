@@ -4,6 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  content    :text             not null
+#  title      :text             not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint           not null
@@ -18,4 +19,15 @@
 #
 class Article < ApplicationRecord
   belongs_to :user
+
+  has_many_attached :images
+
+  def display_created_at
+    I18n.l(self.created_at, format: :default)
+  end
+
+  def author_name
+    user.username
+  end
+
 end

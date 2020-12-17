@@ -1,3 +1,20 @@
 = render 'commons/header'
+- @articles.each do |article|
+  = link_to article_path(article), class: 'article-link' do
+    .card
+      .card-text
+        .card-text-title
+          %h1= article.title.truncate(12)
+        .card-text-content
+          %p= article.content.truncate(15)
+        .card-text-user
+          .card-text-user-image
+            = image_tag 'top-page.jpg'
+          .card-text-user-info
+            %p= article.author_name
+            %p.created-at= article.display_created_at
+      .card-image
+        - if article.images.count > 0
+          = image_tag article.images.first
 = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete'}
 = link_to 'アウトプット作成', new_article_path
