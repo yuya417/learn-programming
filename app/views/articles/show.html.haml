@@ -3,18 +3,19 @@
   %i.fas.fa-arrow-left.fa-2x
 .article
   .article-user
-    .article-user-img
-      = image_tag 'top-page.jpg'
-    .article-user-info
-      %p= @article.author_name
-      %p.article-user-info-created-at= @article.display_created_at
-    - if @article.user == current_user
-      .dropdown-btn
-        %i.fas.fa-ellipsis-h.fa-2x
-        .sub-menu
-          %ul
-            %li 編集
-            %li 削除
+    .article-user-card
+      .article-user-img
+        = image_tag 'top-page.jpg'
+      .article-user-info
+        %p= @article.author_name
+        %p.article-user-info-created-at= @article.display_created_at
+    .article-user-dropdown
+      - if @article.user == current_user
+        .dropdown
+          %i.fas.fa-ellipsis-h.fa-2x
+          .dropdown-content.mini
+            = link_to '編集', edit_article_path(@article)
+            = link_to '削除', article_path(@article), data: { method: 'delete', confirm: '削除してもよろしいですか？'}
   .article-title
     %h1= @article.title
   .article-images
