@@ -4,7 +4,7 @@ import axios from 'modules/axios'
 const appendNewComment = (comment) => {
   $('.comments-container').prepend(
     `<div class="comment-card">
-      <img src="http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d017ca34d3960653044e6f4172a2b9551d7f2fd5/mamechi1110003_TP_V.jpg">
+      <img src="/assets/top-page-5e2db3dee6619558ca8142ba969b1fdad2b3db6345c7c69b2a9e5b55770d941a.jpg">
       <div class="comment-card-content">
         <div class="comment-card-info-username">${comment.author_name}</div>
         <div class="comment-card-info-content">${comment.content}</div>
