@@ -18,7 +18,12 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Article < ApplicationRecord
+  validates :title, presence: true
+  validates :content, presence: true
+
   belongs_to :user
+  
+  has_many :comments, dependent: :destroy
 
   has_many_attached :images
 

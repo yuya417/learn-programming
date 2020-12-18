@@ -18,7 +18,18 @@ body {
   margin: 0;
   margin-right: 5%;
   margin-left: 5%;
-  position:relative
+  position: relative;
+  .new-article-link {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    text-decoration: none;
+    color: #000;
+    i {
+      background-color: white;
+      border-radius: 50%;
+    }
+  } 
 }
 
 html {

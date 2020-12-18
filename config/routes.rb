@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'user_authentications#index'
 
-  resources :articles
+  resources :articles do
+    resources :comments, only: [:index, :create, :destroy]
+  end
 end

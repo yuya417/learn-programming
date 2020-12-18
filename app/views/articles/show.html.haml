@@ -1,7 +1,7 @@
 = render 'commons/header'
 = link_to articles_path, class: 'back-articles-icon' do
   %i.fas.fa-arrow-left.fa-2x
-.article
+.article#article-show{data: {article_id: @article.id}}
   .article-user
     .article-user-card
       .article-user-img
@@ -28,3 +28,21 @@
       23
   .article-content
     %p= @article.content
+
+.comment
+  .comment-header
+    %h1 コメント一覧
+  .comment-count
+    
+  .comment-form
+    .comment-form-user
+      .comment-form-user-image
+        = image_tag 'top-page.jpg'
+      .comment-form-user-textarea
+        = text_area_tag :comment_content, '', class:'sm'
+    .comment-form-btn
+      = button_tag type: :submit do
+        %i.far.fa-paper-plane.fa-2x
+  .comments-container
+-# JavaScriptの読み込み
+= javascript_pack_tag 'article'

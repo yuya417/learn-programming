@@ -1,0 +1,90 @@
+.comment {
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  margin-bottom: 70px;
+  .comment-header {
+    border-bottom: 1px solid #dadada;
+    h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      padding-bottom: 5px;
+    }
+  }
+  .comment-count {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+  .comment-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    .comment-form-user {
+      display: flex;
+      width: 100%;
+      .comment-form-user-image {
+        margin-right: 10px;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-top: 2px;
+        }
+      }
+      .comment-form-user-textarea {
+        width: 100%;
+        textarea {
+          width: 98%;
+          height: 30px;
+          border: none;
+          border-bottom: 1px solid #dadada;
+          outline: 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .comment-form-btn {
+      margin-top: 6px;
+      button {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        outline: 0;
+      }
+      button:hover {
+        i {
+          color: #8e8e8e;
+        }
+      }
+    }
+  }
+}
+
+// コメント一覧
+.comments-container {
+  margin-top: 50px;
+  .comment-card {
+    margin-top: 20px;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-top: 7px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .comment-card-content {
+      width: 90%;
+      .comment-card-info-username {
+        font-size: 0.8rem;
+      }
+      .comment-card-info-content {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
