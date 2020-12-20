@@ -1,6 +1,7 @@
 .header
   .header-title
-    Learn programming
+    = link_to articles_path do
+      Learn programming
   .header-subtitle
     完璧であることより、まず終わらせることが重要だ
 - if !current_page?(articles_path)
