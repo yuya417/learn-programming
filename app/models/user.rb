@@ -26,6 +26,20 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  has_one :profile, dependent: :destroy
+
+  def prepare_profile
+    profile || build_profile
+  end
+
+  def author_image
+    if profile&.image&.attached?
+      profile.image 
+    else
+      'top-page.jpg'
+    end
+  end
+
   
 
 end

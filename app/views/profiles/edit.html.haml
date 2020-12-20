@@ -1,0 +1,18 @@
+= render 'commons/header'
+= form_with( model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+  .edit-profile
+    .edit-profile-username
+      %h1= @user.username
+    .edit-profile-image
+      - if @profile.image.attached?
+        = image_tag @profile.image
+      - else
+        = image_tag 'top-page.jpg'
+      .edit-profile-image-btn
+        = f.file_field :image
+    .edit-profile-introduction
+      = f.text_area :introduction, :placeholder => "自己紹介を書こう！"
+    .edit-profile-btn
+      = f.submit '変更'
+    .user-destroy-btn
+      = link_to 'アカウントを削除', user_registration_path, data: {method: 'delete', confirm: '本当にアカウントを削除してもよろしいですか？'}

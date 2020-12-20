@@ -1,0 +1,17 @@
+= render 'commons/header'
+.profile
+  .profile-card
+    .profile-card-image
+      - if @profile&.image&.attached?
+        = image_tag @profile.image
+      - else 
+        = image_tag 'top-page.jpg'
+    .profile-card-username
+      %h1= @profile.user.username
+    .profile-card-introduction
+      - if @profile&.introduction&.present?
+        %p= @profile.introduction
+      - else 
+        %p 
+-# ユーザーの記事
+= render 'commons/card'

@@ -1,0 +1,22 @@
+= render 'commons/header'
+.profile
+  .profile-card
+    .profile-card-image
+      - if @profile&.image&.attached?
+        = image_tag @profile.image
+      - else 
+        = image_tag 'top-page.jpg'
+    .profile-card-username
+      %h1= current_user.username
+    .profile-card-introduction
+      - if @profile&.introduction&.present?
+        %p= @profile.introduction
+      - else 
+        %p
+    .profile-action-button
+      =link_to 'プロフィールを編集', edit_profile_path
+    .logout-btn
+      = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete', confirm: '本当にログアウトしてもよろしいですか？'}
+  -# ユーザーの記事
+  = render 'commons/card'
+= render 'commons/new_article_btn'

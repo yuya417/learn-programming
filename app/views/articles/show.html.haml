@@ -1,11 +1,13 @@
 = render 'commons/header'
-= link_to articles_path, class: 'back-articles-icon' do
-  %i.fas.fa-arrow-left.fa-2x
 .article#article-show{data: {article_id: @article.id}}
   .article-user
     .article-user-card
-      .article-user-img
-        = image_tag 'top-page.jpg'
+      = link_to account_path(@user) do
+        .article-user-img
+          - if @article.user&.profile&.image
+            = image_tag @article.user.profile.image
+          - else 
+            = image_tag 'top-page.jpg'
       .article-user-info
         %p= @article.author_name
         %p.article-user-info-created-at= @article.display_created_at
@@ -15,7 +17,7 @@
           %i.fas.fa-ellipsis-h.fa-2x
           .dropdown-content.mini
             = link_to '編集', edit_article_path(@article)
-            = link_to '削除', article_path(@article), data: { method: 'delete', confirm: '削除してもよろしいですか？'}
+            = link_to '削除', article_path(@article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
   .article-title
     %h1= @article.title
   .article-images
@@ -33,11 +35,13 @@
   .comment-header
     %h1 コメント一覧
   .comment-count
-    
   .comment-form
     .comment-form-user
       .comment-form-user-image
-        = image_tag 'top-page.jpg'
+        - if current_user&.profile&.image&.attached?
+          = image_tag current_user.profile.image
+        - else 
+          = image_tag 'top-page.jpg'
       .comment-form-user-textarea
         = text_area_tag :comment_content, '', class:'sm'
     .comment-form-btn

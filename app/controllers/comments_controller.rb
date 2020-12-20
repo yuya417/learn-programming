@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def index
     article = Article.find(params[:article_id])
     comments = article.comments.all.order(id: "DESC")
-    render json: comments, include: { user: [:username] }
+    render json: comments
   end
 
   def create

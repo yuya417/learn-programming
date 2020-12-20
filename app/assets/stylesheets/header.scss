@@ -5,11 +5,20 @@
   padding-bottom: 5px;
   margin-bottom: 50px;
   text-align: center;
+  
   .header-title {
     margin-top: 5px;
     font-weight: bold;
     font-size: 1.5rem;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover {
+      color: #8c8c8c
+    }
   }
+  
   .header-subtitle {
     font-size: 0.7rem;
     color: #777777;
