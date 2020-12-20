@@ -31,6 +31,15 @@ class User < ApplicationRecord
   def prepare_profile
     profile || build_profile
   end
+
+  def author_image
+    if profile&.image&.attached?
+      profile.image 
+    else
+      'top-page.jpg'
+    end
+  end
+
   
 
 end

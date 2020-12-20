@@ -3,7 +3,10 @@
   .article-user
     .article-user-card
       .article-user-img
-        = image_tag 'top-page.jpg'
+        - if @article.user&.profile&.image
+          = image_tag @article.user.profile.image
+        - else 
+          = image_tag 'top-page.jpg'
       .article-user-info
         %p= @article.author_name
         %p.article-user-info-created-at= @article.display_created_at
@@ -31,11 +34,13 @@
   .comment-header
     %h1 コメント一覧
   .comment-count
-    
   .comment-form
     .comment-form-user
       .comment-form-user-image
-        = image_tag 'top-page.jpg'
+        - if current_user&.profile&.image.attached?
+          = image_tag current_user.profile.image
+        - else 
+          = image_tag 'top-page.jpg'
       .comment-form-user-textarea
         = text_area_tag :comment_content, '', class:'sm'
     .comment-form-btn

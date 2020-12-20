@@ -18,5 +18,14 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username
+  attributes :id, :username, :author_image
+
+  def author_image
+    if object.author_image != 'top-page.jpg'
+      rails_blob_path(object.author_image) 
+    else
+      "/assets/top-page-5e2db3dee6619558ca8142ba969b1fdad2b3db6345c7c69b2a9e5b55770d941a.jpg"
+    end
+  end
+
 end
