@@ -10,7 +10,7 @@
             %p= article.content.truncate(15)
           .card-text-user
             .card-text-user-image
-              - if article.user&.profile&.image.attached?
+              - if article.user&.profile&.image&.attached?
                 = image_tag article.user.profile.image
               - else
                 = image_tag 'top-page.jpg'
@@ -20,7 +20,4 @@
         .card-image
           - if article.images.count > 0
             = image_tag article.images.first
-= link_to new_article_path, class: 'new-article-link' do
-  %i.fas.fa-plus-circle.fa-4x
-= link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete'}
-= link_to 'プロフィール', profile_path
+= render 'commons/new_article_btn'

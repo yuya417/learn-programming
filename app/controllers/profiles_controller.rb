@@ -9,6 +9,7 @@ class ProfilesController < ApplicationController
 
   def edit
     @profile = current_user.prepare_profile
+    @user = current_user
   end
 
   def update

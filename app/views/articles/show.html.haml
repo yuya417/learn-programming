@@ -17,7 +17,7 @@
           %i.fas.fa-ellipsis-h.fa-2x
           .dropdown-content.mini
             = link_to '編集', edit_article_path(@article)
-            = link_to '削除', article_path(@article), data: { method: 'delete', confirm: '削除してもよろしいですか？'}
+            = link_to '削除', article_path(@article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？'}
   .article-title
     %h1= @article.title
   .article-images
@@ -38,7 +38,7 @@
   .comment-form
     .comment-form-user
       .comment-form-user-image
-        - if current_user&.profile&.image.attached?
+        - if current_user&.profile&.image&.attached?
           = image_tag current_user.profile.image
         - else 
           = image_tag 'top-page.jpg'
