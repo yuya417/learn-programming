@@ -7,13 +7,11 @@
       - else 
         = image_tag 'top-page.jpg'
     .profile-card-username
-      %h1= current_user.username
+      %h1= @profile.user.username
     .profile-card-introduction
       - if @profile&.introduction&.present?
         %p= @profile.introduction
       - else 
-        %p
-    .profile-action-button
-      =link_to 'プロフィールを編集', edit_profile_path
+        %p 
 -# ユーザーの記事
 = render 'commons/card'

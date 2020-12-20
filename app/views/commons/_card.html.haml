@@ -1,0 +1,11 @@
+- @articles.each do |article|
+  = link_to article_path(article), class: 'article-link' do
+    .card
+      .card-text
+        .card-text-title
+          %h1= article.title.truncate(12)
+        .card-text-content
+          %p= article.content.truncate(15)
+      .card-image
+        - if article.images.count > 0
+          = image_tag article.images.first

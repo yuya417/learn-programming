@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:index, :create, :destroy]
   end
+  resources :accounts, only: [:show]
 
   resource :profile, only: [:show, :edit, :update]
   
