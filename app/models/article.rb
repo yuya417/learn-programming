@@ -36,4 +36,12 @@ class Article < ApplicationRecord
     user.username
   end
 
+  def like_count
+    likes.count
+  end
+
+  def comment_count
+    comments.count
+  end
+
 end

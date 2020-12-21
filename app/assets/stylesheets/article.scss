@@ -89,20 +89,26 @@
       width: 100%;
     }
   }
-  .article-likes, .article-likes-active {
+  .like {
     display: flex;
-    margin-bottom: 20px;
-    img {
-      width: 20px;
-      height: 20px;
+    .handle-like {
+      .article-likes, .article-likes-active {
+        display: flex;
+        margin-bottom: 20px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .hidden {
+        display: none;
+      }
     }
     .article-likes-count {
-      margin-left: 5px;
+      margin-left: 7px;
       color: red;
+      font-size: 1rem;
     }
-  }
-  .hidden {
-    display: none;
   }
   .article-content {
     p {
