@@ -24,10 +24,14 @@
     - if @article.images.attached?
       - @article.images.each do |image|
         = image_tag image
-  .article-likes
-    = image_tag 'like.png'
+  .like
+    .handle-like
+      .article-likes.hidden
+        = image_tag 'like.png'
+      .article-likes-active.hidden
+        = image_tag 'like_active.png'
     .article-likes-count
-      23
+      = @article.like_count
   .article-content
     %p= @article.content
 
@@ -35,6 +39,7 @@
   .comment-header
     %h1 コメント一覧
   .comment-count
+    %p= "#{@article.comment_count}件のコメント"
   .comment-form
     .comment-form-user
       .comment-form-user-image

@@ -24,6 +24,7 @@ class Article < ApplicationRecord
   belongs_to :user
   
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   has_many_attached :images
 
@@ -33,6 +34,14 @@ class Article < ApplicationRecord
 
   def author_name
     user.username
+  end
+
+  def like_count
+    likes.count
+  end
+
+  def comment_count
+    comments.count
   end
 
 end

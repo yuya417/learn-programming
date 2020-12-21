@@ -1,5 +1,9 @@
 import $ from 'jquery'
 import axios from 'modules/axios'
+import {
+  listenInactiveHeartEvent, 
+  listenActiveHeartEvent
+} from 'modules/handle_heart'
 
 const appendNewComment = (comment) => {
   $('.comments-container').prepend(
@@ -13,22 +17,17 @@ const appendNewComment = (comment) => {
   )
 }
 
-const appendCommentCount = (commentCount) => {
-  $('.comment-count').append(
-    `<p class="comment-count-number">${commentCount}件のコメント</p>`
-  )
+const handleHeartDisplay = (hasLiked) => {
+  if(hasLiked) {
+    $('.article-likes-active').removeClass('hidden')
+  } else {
+    $('.article-likes').removeClass('hidden')
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = $('#article-show').data()
   const articleId = dataset.articleId
-
-  // コメント数表示
-  axios.get(`/articles/${articleId}/comments`)
-    .then((response) => {
-      const commentCount = response.data.length
-      appendCommentCount(commentCount)
-    })
 
   // コメント表示
   axios.get(`/articles/${articleId}/comments`)
@@ -58,6 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   })
+
+
+  // いいね機能
+  axios.get(`/articles/${articleId}/like`)
+    .then((response) => {
+      const hasLiked = response.data.hasLiked
+      handleHeartDisplay(hasLiked)
+    })
   
-    
+  listenInactiveHeartEvent(articleId)
+  listenActiveHeartEvent(articleId)
+  
+
 })
