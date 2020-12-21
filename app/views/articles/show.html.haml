@@ -24,8 +24,10 @@
     - if @article.images.attached?
       - @article.images.each do |image|
         = image_tag image
-  .article-likes
+  .article-likes.hidden
     = image_tag 'like.png'
+  .article-likes-active.hidden
+    = image_tag 'like_active.png'
     .article-likes-count
       23
   .article-content

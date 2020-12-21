@@ -58,6 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   })
+
+
+  // いいね機能
+  axios.get(`/articles/${articleId}/like`)
+    .then((response) => {
+      const hasLiked = response.data.hasLiked
+      if(hasLiked) {
+        $('.article-likes-active').removeClass('hidden')
+      } else {
+        $('.article-likes').removeClass('hidden')
+      }
+    })
   
     
 })
