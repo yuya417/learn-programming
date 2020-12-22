@@ -1,6 +1,6 @@
 = render 'commons/header'
-.profile
-  .profile-card
+.profile{data: {account_id: @user.id} }
+  .profile-card{data: {my_id: @current_user.id}}
     .profile-card-image
       - if @profile&.image&.attached?
         = image_tag @profile.image
@@ -13,5 +13,11 @@
         %p= @profile.introduction
       - else 
         %p 
+.relationship
+  .follow-btn.hidden
+    %p Follow
+  .unfollow-btn.hidden
+    %p Unfollow
 -# ユーザーの記事
 = render 'commons/card'
+= javascript_pack_tag 'account'
