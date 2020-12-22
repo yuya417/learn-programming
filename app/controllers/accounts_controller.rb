@@ -6,6 +6,7 @@ class AccountsController < ApplicationController
     user_judgement(@user)
     @profile = @user.profile
     @articles = @user.articles
+    @current_user = current_user
   end
 
   private

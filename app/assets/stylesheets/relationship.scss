@@ -1,0 +1,34 @@
+.relationship {
+  margin-bottom: 70px;
+  .follow-btn {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    p {
+      font-size: 1rem;
+    }
+  }
+  .follow-btn:hover {
+    background-color: #efefef;
+  }
+  .unfollow-btn {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: white;
+    border-radius: 10px;
+    p {
+      font-size: 1rem;
+    }
+  }
+  .unfollow-btn:hover {
+    background-color: #616060;
+  }
+  .hidden {
+    display: none;
+  }
+}
