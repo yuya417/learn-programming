@@ -1,0 +1,15 @@
+= render 'commons/header'
+= render 'commons/nav_bar'
+.search-article
+  .search-article-title
+    %h1 気になる記事を探す
+  .search-article-form
+    = search_form_for @search, url: searches_path do |f|
+      .search-article-form-keyword
+        = f.label :title_or_content, 'キーワード'
+      .search-article-form-input
+        = f.search_field :title_or_content_cont, placeholder: "気になるキーワードで検索してみよう！"
+      .search-article-form-submit
+        = f.submit '検索'
+  .search-article-result
+    = render 'commons/articles'
