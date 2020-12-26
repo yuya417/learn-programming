@@ -67,6 +67,8 @@ class User < ApplicationRecord
     following_relationships.exists?(following_id: user_id)
   end
 
+  after_create :send_email
+
   private
   def get_user_id(user)
     if user.is_a?(User)
@@ -74,6 +76,10 @@ class User < ApplicationRecord
     else
       user
     end
+  end
+
+  def send_email
+    UserRegistrationMailer.new_registration(self).deliver_later
   end
   
 end
