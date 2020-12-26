@@ -7,6 +7,8 @@ class AccountsController < ApplicationController
     @profile = @user.profile
     @articles = @user.articles
     @current_user = current_user
+    @following_count = @user.followings.count
+    @followers_count = @user.followers.count
   end
 
   private

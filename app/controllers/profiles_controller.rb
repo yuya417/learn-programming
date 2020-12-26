@@ -3,8 +3,10 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = current_user.profile
-    user = current_user
-    @articles = user.articles
+    @user = current_user
+    @articles = @user.articles
+    @following_count = @user.followings.count
+    @followers_count = @user.followers.count
   end
 
   def edit

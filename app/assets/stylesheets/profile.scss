@@ -16,6 +16,28 @@
         font-size: 1.5rem;
       }
     }
+    .profile-card-user-list {
+      display: flex;
+      justify-content: center;
+      .profile-card-user-list-followings {
+        margin-right: 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        span {
+          font-weight: normal;
+          color: #828282;
+        }
+      }
+      .profile-card-user-list-followers {
+        margin-left: 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        span {
+          font-weight: normal;
+          color: #828282;
+        }
+      }
+    }
     .profile-card-introduction {
       margin-top: 20px;
       padding: 5px 10px;

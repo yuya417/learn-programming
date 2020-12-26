@@ -1,0 +1,11 @@
+= render 'commons/header'
+.user-list
+  %h1 フォロワー
+  - @followers.each do |follower|
+    = link_to account_path(follower) do
+      .user-list-card
+        .user-list-card-image
+          = image_tag follower.author_image
+        .user-list-card-name
+          = follower.username
+    
