@@ -2,9 +2,8 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @articles = Article.all.order("id DESC")
-    # user_ids = current_user.followings.pluck(:id)
-    # @articles = Article.where(user_id: user_ids)
+    user_ids = current_user.followings.pluck(:id)
+    @articles = Article.where(user_id: user_ids)
   end
 
   def show
