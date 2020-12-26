@@ -9,7 +9,7 @@
         = f.label :title_or_content, 'キーワード'
       .search-article-form-input
         = f.search_field :title_or_content_cont, placeholder: "気になるキーワードで検索してみよう！"
-      .search-article-form-submit
+      .submit-btn
         = f.submit '検索'
   .search-article-result
     = render 'commons/articles'

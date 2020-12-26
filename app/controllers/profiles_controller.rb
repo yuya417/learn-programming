@@ -2,8 +2,8 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @profile = current_user.profile
     @user = current_user
+    @profile = current_user.profile
     @articles = @user.articles
     @following_count = @user.followings.count
     @followers_count = @user.followers.count

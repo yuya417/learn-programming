@@ -17,5 +17,8 @@ class Profile < ApplicationRecord
   
   has_one_attached :image
 
+  def author_name
+    user.username
+  end
   
 end

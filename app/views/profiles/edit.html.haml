@@ -13,7 +13,7 @@
         = f.file_field :image
     .edit-profile-introduction
       = f.text_area :introduction, :placeholder => "自己紹介を書こう！"
-    .edit-profile-btn
+    .submit-btn
       = f.submit '変更'
     .user-destroy-btn
       = link_to 'アカウントを削除', user_registration_path, data: {method: 'delete', confirm: '本当にアカウントを削除してもよろしいですか？'}
