@@ -8,7 +8,16 @@
       - else 
         = image_tag 'top-page.jpg'
     .profile-card-username
-      %h1= current_user.username
+      %h1= @user.username
+    .profile-card-user-list
+      .profile-card-user-list-followings
+        = link_to account_followings_path(@user) do
+          = @following_count
+          %span フォロー中
+      .profile-card-user-list-followers
+        = link_to account_followers_path(@user) do
+          = @followers_count
+          %span フォロワー
     .profile-card-introduction
       - if @profile&.introduction&.present?
         %p= @profile.introduction
