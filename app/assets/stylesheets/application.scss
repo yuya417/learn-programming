@@ -20,20 +20,7 @@ body {
   margin-left: 5%;
   position: relative;
   background-color: #f9fbfe;
-  .new-article-link {
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    text-decoration: none;
-    color: #000;
-    i {
-      background-color: white;
-      border-radius: 50%;
-    }
-  } 
-  .new-article-link:hover {
-    color: #616060;
-  }
+  margin-bottom: 250px;
 }
 
 html {

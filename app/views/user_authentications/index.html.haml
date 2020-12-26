@@ -10,3 +10,32 @@
       ログイン
     = link_to new_user_registration_path, class: 'user-authentications-new-registration' do
       新規登録
+.app-info
+  .app-info-first
+    .app-info-first-title
+      %h1 積み上げた内容をつぶやこう
+    .app-info-first-image
+      = image_tag 'app-info-image1.png'
+  .app-info-first
+    .app-info-first-title
+      %h1 仲間の積み上げた内容が見れる
+    .app-info-first-image
+      = image_tag 'app-info-image2.png'
+  .app-info-first
+    .app-info-first-title
+      %h1 仲間の積み上げにコメントができる
+    .app-info-first-image
+      = image_tag 'app-info-image3.png'
+  .app-info-first
+    .app-info-first-title
+      %h1 仲間をフォローできる
+    .app-info-first-image
+      = image_tag 'app-info-image4.png'
+  .app-info-first
+    .app-info-first-title
+      %h1 集まれ、プログラミング仲間
+    .app-info-first-content
+      %p 1分後、プログラミングの世界でお会いしましょう！
+      = link_to new_user_registration_path do
+        .app-info-first-new-registration
+          無料会員登録
