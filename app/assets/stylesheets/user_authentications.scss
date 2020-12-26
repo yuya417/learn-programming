@@ -41,3 +41,46 @@
     }
   }
 }
+.app-info-first {
+  background-color: #525954;
+  margin-top: 100px;
+  padding-bottom: 60px;
+  .app-info-first-title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom :30px;
+    h1 {
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+  .app-info-first-image {
+    text-align: center;
+    padding-bottom: 60px;
+    img {
+      width: 90%;
+    }
+  }
+  .app-info-first-content {
+    text-align: center;
+    p {
+      font-size: 0.9rem;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      .app-info-first-new-registration {
+        background-color: #30c8d6;
+        width: 120px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 60px auto;
+        
+      }
+      .app-info-first-new-registration:hover {
+        background-color: #358a92;
+      }
+    }
+  }
+}

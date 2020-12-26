@@ -1,4 +1,5 @@
 = render 'commons/header'
+= render 'commons/nav_bar'
 .profile
   .profile-card
     .profile-card-image
@@ -19,4 +20,3 @@
       = link_to 'ログアウト', destroy_user_session_path, data: {method: 'delete', confirm: '本当にログアウトしてもよろしいですか？'}
   -# ユーザーの記事
   = render 'commons/card'
-= render 'commons/new_article_btn'

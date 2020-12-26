@@ -1,4 +1,5 @@
 = render 'commons/header'
+= render 'commons/nav_bar'
 .articles
   - @articles.each do |article|
     = link_to article_path(article), class: 'article-link' do
@@ -20,4 +21,3 @@
         .card-image
           - if article.images.count > 0
             = image_tag article.images.first
-= render 'commons/new_article_btn'
