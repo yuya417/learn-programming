@@ -23,6 +23,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
+  validates :username, presence: true
+  validates :username, length: { minimum: 2 }
+  validates :username, length: { maximum: 20 }
+  validates :email, presence: true
+  validates :password, presence: true
+  validates :password, length: { minimum: 6 }
+  
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
