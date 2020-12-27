@@ -36,6 +36,20 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true 
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.sendgrid.net",
+    :port => 587,
+    :domain => 'smtp.sendgrid.net',
+    :user_name => "apikey",
+    :password => ENV['SEND_GRID_API_KEY'],
+    :authentication => :plain
+  }
+
   config.action_mailer.perform_caching = false
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
