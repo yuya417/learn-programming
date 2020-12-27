@@ -14,6 +14,7 @@
 #
 class Profile < ApplicationRecord
   belongs_to :user
+  validates :introduction, length: { maximum: 100 }
   
   has_one_attached :image
 
