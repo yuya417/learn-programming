@@ -31,6 +31,7 @@ gem 'hamlit'
 gem 'sidekiq'
 gem 'active_model_serializers'
 gem 'ransack'
+gem 'aws-sdk-s3', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -47,6 +48,7 @@ group :development, :test do
   gem 'letter_opener_web', '~> 1.0'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

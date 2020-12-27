@@ -1,0 +1,16 @@
+{
+  "name": "learn programming",
+  "description": "This is blogapp",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/yuya417/learn-programming",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
