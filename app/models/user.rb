@@ -86,7 +86,7 @@ class User < ApplicationRecord
   end
 
   def send_email
-    RegistrationMailer.new_registration(user).deliver_later
+    RegistrationMailer.new_registration(self).deliver_later
   end
   
 end
