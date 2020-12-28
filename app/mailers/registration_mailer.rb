@@ -1,4 +1,4 @@
-class UserRegistrationMailer < ApplicationMailer
+class RegistrationMailer < ApplicationMailer
 
   def new_registration(user)
     @user = user
