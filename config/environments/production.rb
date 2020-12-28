@@ -1,6 +1,6 @@
 Rails.application.configure do
-  host = 'samplehost'
-  Rails.application.routes.default_url_options[:host] = host
+  # host = 'samplehost'
+  # Rails.application.routes.default_url_options[:host] = host
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -62,44 +62,19 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "learn_programming_production"
 
-  # config.action_mailer.perform_caching = false
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.smtp_settings = {
-  #   :enable_starttls_auto => true,
-  #   :address => 'smtp.sendgrid.net',
-  #   :port => 587,
-  #   :domain => 'herokuapp.com',
-  #   :authentication => :plain,
-  #   :user_name => ENV['SENDGRID_USERNAME'],
-  #   :password => ENV['SENDGRID_PASSWORD'],
-  # }
+  config.action_mailer.perform_caching = false
 
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.delivery_method = :smtp
-  # host = 'learn-programming-yuya.herokuapp.com'
-  # config.action_mailer.default_url_options = { host: host }
-  # ActionMailer::Base.smtp_settings = {
-  #   :address        => 'smtp.sendgrid.net',
-  #   :port           => '587',
-  #   :authentication => :plain,
-  #   :user_name      => ENV['SENDGRID_USERNAME'],
-  #   :password       => ENV['SENDGRID_PASSWORD'],
-  #   :domain         => 'heroku.com',
-  #   :enable_starttls_auto => true
-  # }
-
-#   config.action_mailer.default_url_options = { :host => 'https://learn-programming-yuya.herokuapp.com' }
-#   config.action_mailer.delivery_method = :smtp
-#   config.action_mailer.smtp_settings = {
-#   :enable_starttls_auto => true,
-#   :address => "smtp.sendgrid.net",
-#   :port => 587,
-#   :domain => "heroku.com",
-#   :authentication => :plain,
-#   :user_name => ENV['SENDGRID_USERNAME'],
-#   :password => ENV['SENDGRID_PASSWORD'],
-# }
+  host = 'https://learn-programming-yuya.herokuapp.com/'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'yourdomain.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
