@@ -10,12 +10,6 @@ class FollowsController < ApplicationController
   def create
     current_user.follow!(params[:account_id])
     render json: { status: 'ok' }
-    send_email
-  end
-
-  private
-  def send_email
-    RelationshipMailer.new_follower(following, follower).deliver_later
   end
 
 end
