@@ -63,19 +63,6 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "learn_programming_production"
 
   config.action_mailer.perform_caching = false
-
-  # host = 'https://learn-programming-yuya.herokuapp.com/'
-  # config.action_mailer.default_url_options = { host: host }
-  # ActionMailer::Base.smtp_settings = {
-  #   :user_name => ENV['SENDGRID_USERNAME'],
-  #   :password => ENV['SENDGRID_PASSWORD'],
-  #   :domain => 'yourdomain.com',
-  #   :address => 'smtp.sendgrid.net',
-  #   :port => 587,
-  #   :authentication => :plain,
-  #   :enable_starttls_auto => true
-  # }
-
   ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => 587,
