@@ -1,6 +1,6 @@
 Rails.application.configure do
-  # host = 'samplehost'
-  # Rails.application.routes.default_url_options[:host] = host
+  host = 'samplehost'
+  Rails.application.routes.default_url_options[:host] = host
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -64,8 +64,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  host = 'https://learn-programming-yuya.herokuapp.com/'
-  config.action_mailer.default_url_options = { host: host }
+  # host = 'https://learn-programming-yuya.herokuapp.com/'
+  # config.action_mailer.default_url_options = { host: host }
   # ActionMailer::Base.smtp_settings = {
   #   :user_name => ENV['SENDGRID_USERNAME'],
   #   :password => ENV['SENDGRID_PASSWORD'],
