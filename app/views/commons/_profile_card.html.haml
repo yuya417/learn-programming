@@ -2,7 +2,7 @@
   - if @profile&.image&.attached?
     = image_tag @profile.image
   - else 
-    = image_tag 'top-page.jpg'
+    = image_tag 'noprofile.png'
 .profile-card-username
   %h1= @user.username
 .profile-card-user-list

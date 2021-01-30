@@ -8,7 +8,7 @@
           - if @article.user&.profile&.image
             = image_tag @article.user.profile.image
           - else 
-            = image_tag 'top-page.jpg'
+            = image_tag 'noprofile.png'
       .article-user-info
         %p= @article.author_name
         %p.article-user-info-created-at= @article.display_created_at
@@ -47,7 +47,7 @@
         - if current_user&.profile&.image&.attached?
           = image_tag current_user.profile.image
         - else 
-          = image_tag 'top-page.jpg'
+          = image_tag 'noprofile.png'
       .comment-form-user-textarea
         = text_area_tag :comment_content, '', class:'sm'
     .comment-form-btn

@@ -8,7 +8,7 @@
       - if @profile.image.attached?
         = image_tag @profile.image
       - else
-        = image_tag 'top-page.jpg'
+        = image_tag 'noprofile.png'
       .edit-profile-image-btn
         = f.file_field :image
     .edit-profile-introduction

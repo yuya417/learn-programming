@@ -12,7 +12,7 @@
               - if article.user&.profile&.image&.attached?
                 = image_tag article.user.profile.image
               - else
-                = image_tag 'top-page.jpg'
+                = image_tag 'noprofile.png'
             .card-text-user-info
               %p= article.author_name
               %p.created-at= article.display_created_at
