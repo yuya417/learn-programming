@@ -11,7 +11,6 @@
 【使用技術】<br>
 ・言語：HAML、SCSS、JavaScript、jQuery、Ruby、Ruby on Rails<br>
 ・データベース：PostgreSQL<br>
-・gem：devise、faker、font-awesome-sass、hamlit、sidekiq、active_model_serializers、　ransack、aws-sdk-s3、annotate、better_errors、binding_of_caller、byebug、pry-byebug、rubocop-rails、rspec-rails、letter_opener、factory_bot_rails、dotenv-rails、erb2haml
 ・ActiveStorageService：Amazon S3<br>
 ・環境：heroku<br>
 ・管理：SourceTree、Github<br>
