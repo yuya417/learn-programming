@@ -1,6 +1,7 @@
 # README
 
 アプリの概要<br>
+[アプリのURL:https://learn-programming-yuya.herokuapp.com/]
 【アプリのターゲット】<br>
 ・プログラミングを学習しているが、周りにプログラミング仲間がいない人<br>
 ・主に文系大学生でプログラミング学習を行っている人
